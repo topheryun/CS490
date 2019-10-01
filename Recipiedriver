@@ -1,0 +1,68 @@
+import java.net.*;
+import java.nio.ByteBuffer;
+import java.awt.image.BufferedImage;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.imageio.ImageIO;
+public class Recipiedriver {
+	public static void main(String[] args) throws Exception {
+
+		 URL url = new URL("https://www.allrecipes.com/recipe/11466/ultimate-maple-snickerdoodles/?internalSource=staff%20pick&referringId=362&referringContentType=Recipe%20Hub");
+		 PrintWriter writer = new PrintWriter("webpage.txt", "UTF-8");
+		 List<String> list = new ArrayList<String>();;
+		 BufferedReader read = new BufferedReader(
+     new InputStreamReader(url.openStream()));
+     String i;
+     String name = null;
+     int rcount = 0;
+     double rscore = 0.0;
+     
+     while ((i = read.readLine()) != null) {
+    	if(i.contains("<title>")) {
+    		name = i.substring(11, i.length()-32);
+    	}
+    	if(i.contains("og:image")) {
+    		saveImage(i.substring(47,113), "recipeimage.jpg");
+    	}
+    	if(i.contains("checkList__item")&&i.contains("[true]")) {
+     writer.write(i.substring(81, i.length()-2)+"\n");
+     list.add(i.substring(81, i.length()-2));
+    	 }
+    	if(i.contains("itemprop")&&i.contains("reviewCount")) {
+    		rcount = (int) Double.parseDouble(i.substring(50, i.length()-2));
+    	}
+    	if(i.contains("itemprop")&&i.contains("ratingValue")&&rscore == 0) {
+    		rscore = Double.parseDouble(i.substring(50, i.length()-2));
+    	}
+     }
+     BufferedImage originalImage = ImageIO.read(new File("recipeimage.jpg"));
+     ByteArrayOutputStream baos = new ByteArrayOutputStream();
+     ImageIO.write( originalImage, "jpg", baos );
+     baos.flush();
+     byte[] imageInByte = baos.toByteArray();
+     baos.close();
+     ByteBuffer buf = ByteBuffer.wrap(imageInByte);
+     Recipe res;
+     res = new Recipe(name,list,rscore,rcount,buf);
+     System.out.println(res.toString());
+     writer.close();
+     read.close();
+	}
+	public static void saveImage(String imageUrl, String destinationFile) throws IOException {
+    URL url = new URL(imageUrl);
+    InputStream is = url.openStream();
+    OutputStream os = new FileOutputStream(destinationFile);
+
+    byte[] b = new byte[2048];
+    int length;
+
+    while ((length = is.read(b)) != -1) {
+        os.write(b, 0, length);
+    }
+
+    is.close();
+    os.close();
+}
+}
