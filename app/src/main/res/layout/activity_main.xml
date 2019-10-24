@@ -6,18 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView_test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@android:string/untitled"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageButton
-        android:id="@+id/imageButton_pan"
+        android:id="@+id/imageButton_search"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="32dp"
@@ -27,13 +17,13 @@
         android:scaleType="fitCenter"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton_location"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton_map"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/pan"
         tools:visibility="visible" />
 
     <ImageButton
-        android:id="@+id/imageButton_location"
+        android:id="@+id/imageButton_map"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="32dp"
@@ -42,13 +32,13 @@
         android:contentDescription="@android:string/unknownName"
         android:scaleType="fitCenter"
         android:visibility="visible"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton_car"
-        app:layout_constraintStart_toEndOf="@+id/imageButton_pan"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton_delivery"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_search"
+        app:layout_constraintTop_toBottomOf="@+id/image_logo"
         app:srcCompat="@drawable/location" />
 
     <ImageButton
-        android:id="@+id/imageButton_car"
+        android:id="@+id/imageButton_delivery"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="6dp"
@@ -58,11 +48,11 @@
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton_location"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_map"
         app:srcCompat="@drawable/car" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/image_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
@@ -70,18 +60,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/Logo" />
+        app:srcCompat="@drawable/logo" />
 
     <Button
         android:id="@+id/button_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="@android:string/unknownName"
+        android:text="@string/button_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton_location"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_map"
         tools:text="Login" />
 
     <Button
@@ -90,11 +80,24 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
         android:layout_marginBottom="24dp"
-        android:text="@android:string/unknownName"
+        android:text="@string/button_register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_login"
         app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView_recipeFinder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="@string/text_recipeFinder"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/image_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

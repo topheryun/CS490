@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">CS490</string>
+    <string name="button_login">Login</string>
+    <string name="button_register">Register</string>
+    <string name="text_recipeFinder">Recipe Finder</string>
+    <string name="tempText_ingredientSearchPage">Ingredient Search Page</string>
+    <string name="text_search">Search</string>
 </resources>
