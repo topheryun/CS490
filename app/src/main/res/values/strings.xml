@@ -4,5 +4,7 @@
     <string name="button_register">Register</string>
     <string name="text_recipeFinder">Recipe Finder</string>
     <string name="tempText_ingredientSearchPage">Ingredient Search Page</string>
+    <string name="tempText_ingredientResultPage">Recipe Page</string>
     <string name="text_search">Search</string>
+    <string name="tempText_search">Search&#8230;</string>
 </resources>
