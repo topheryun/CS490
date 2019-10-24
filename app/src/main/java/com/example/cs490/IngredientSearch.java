@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 public class IngredientSearch extends AppCompatActivity {
 
+    int ingredientCount = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +29,7 @@ public class IngredientSearch extends AppCompatActivity {
             }
         });
 
-// Temp search bar that holds the items that have been searched
+        // Temp search bar that holds the items that have been searched
         final EditText searchView = findViewById(R.id.searchView);
         final TextView searchIngredientResult = findViewById(R.id.text_searchIngredientResults);
         searchView.setOnKeyListener(new View.OnKeyListener() {
@@ -38,7 +39,10 @@ public class IngredientSearch extends AppCompatActivity {
                         (keyCode == KeyEvent.KEYCODE_ENTER)) {
                     // Perform action on key press
                     String searchInput = searchView.getText().toString();
-                    String tempStr = searchIngredientResult.getText() + ", " + searchInput;
+                    String tempStr;
+                    if (ingredientCount++ > 0)
+                        tempStr = searchIngredientResult.getText() + ", " + searchInput;
+                    else tempStr = searchInput;
                     searchIngredientResult.setText(tempStr);
                     searchView.setText("");
                     return true;

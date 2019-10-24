@@ -17,15 +17,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Search Button -> Search ingredient page
-        Button searchButton = findViewById(R.id.tempSearchButton);
-        //final Context context = this;
-        searchButton.setOnClickListener(new View.OnClickListener() {
+        ImageButton searchImageButton = findViewById(R.id.imageButton_search);
+        searchImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent searchPageIntent = new Intent(getApplicationContext(), IngredientSearch.class);
-                //Intent searchPageIntent = new Intent(context, IngredientSearch.class);
-                Intent searchPageIntent = new Intent(getApplicationContext(), IngredientSearch.class);
-                startActivity(searchPageIntent);
+                Intent searchIntent = new Intent(getApplicationContext(), IngredientSearch.class);
+                startActivity(searchIntent);
             }
         });
     }
