@@ -7,4 +7,8 @@
     <string name="tempText_ingredientResultPage">Recipe Page</string>
     <string name="text_search">Search</string>
     <string name="tempText_search">Search&#8230;</string>
+    <string name="threeMatches">Three Matches</string>
+    <string name="recipe1">Ultimate Maple Snickerdoodles</string>
+    <string name="recipe2">90-Second Keto Bread in a Mug</string>
+    <string name="recipe3">Gluten-Free Sugar Cookies</string>
 </resources>
