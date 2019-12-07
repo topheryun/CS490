@@ -52,6 +52,10 @@ public class IngredientSearch extends AppCompatActivity {
                 if(!basket.contains(selectedItem) && basket.size() <= 40) {
                     basket.add(selectedItem);
                 }
+                else if(basket.contains(selectedItem) && basket.size() <= 40) {
+                    basket.remove(selectedItem);
+                }
+
                 String list = basket.get(0);
                 for (int i = 1; i < basket.size(); i++) {
                     list = list + " , " + basket.get(i);
@@ -67,9 +71,9 @@ public class IngredientSearch extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //temp.addAll(basket);
-                Intent searchResultsIntent = new Intent(getApplicationContext(), SearchResultsPage2.class);
-                searchResultsIntent.putStringArrayListExtra("key", basket);
-                startActivity(searchResultsIntent);
+                Intent searchResultsIntent1 = new Intent(getApplicationContext(), SearchResultsPage1.class);
+                searchResultsIntent1.putStringArrayListExtra("key1", basket);
+                startActivity(searchResultsIntent1);
             }
         });
 

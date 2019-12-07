@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SearchResultsPage2">
+    tools:context=".SearchResultsPage1">
 
 
 
@@ -16,14 +16,14 @@
         android:weightSum="2">
 
         <Button
-            android:id="@+id/page2button1"
+            android:id="@+id/page1button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/perfect" />
 
         <Button
-            android:id="@+id/page2button2"
+            android:id="@+id/page1button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -32,17 +32,17 @@
     </TableRow>
 
     <TextView
-        android:id="@+id/testView2"
+        android:id="@+id/testView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="TextView1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
-        android:id="@+id/listview2"
+        android:id="@+id/listview1"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

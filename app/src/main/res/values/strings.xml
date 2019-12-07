@@ -8,16 +8,23 @@
     <string name="text_search">Search</string>
     <string name="tempText_search">Search&#8230;</string>
     <string name="threeMatches">Three Matches</string>
-    <string name="recipe1">Ultimate Maple Snickerdoodles</string>
-    <string name="recipe2">90-Second Keto Bread in a Mug</string>
-    <string name="recipe3">Gluten-Free Sugar Cookies</string>
+    <string name="perfect">Perfect Match</string>
+    <string name="partial">Partial Match</string>
+    <string name="complete">All Matches</string>
 
     <string-array name="my_foods">
-        <item>baking powder</item>
+        <item>onions</item>
+        <item>rice</item>
+        <item>corn</item>
+        <item>flour</item>
         <item>eggs</item>
+        <item>baking powder</item>
+        <item>milk</item>
+        <item>chicken</item>
+        <item>salt</item>
+        <item>pepper</item>
         <item>all-purpose flour</item>
         <item>raisins</item>
-        <item>milk</item>
         <item>white sugar</item>
         <item>sugar</item>
         <item>egg yolks</item>
@@ -34,7 +41,6 @@
         <item>fronds</item>
         <item>olive oil</item>
         <item>cuban peppers</item>
-        <item>onions</item>
         <item>meat cuts</item>
         <item>file powder</item>
         <item>smoked sausage</item>
@@ -56,7 +62,6 @@
         <item>yellow onion</item>
         <item>ham</item>
         <item>ground black pepper</item>
-        <item>salt</item>
         <item>sausage casings</item>
         <item>leeks</item>
         <item>parmigiano reggiano cheese</item>
@@ -199,7 +204,6 @@
         <item>vegetable stock</item>
         <item>smoked paprika</item>
         <item>nutmeg</item>
-        <item>pepper</item>
         <item>sweet potatoes</item>
         <item>chopped fresh herbs</item>
         <item>granny smith apples</item>
@@ -290,7 +294,6 @@
         <item>ghee</item>
         <item>wonton wrappers</item>
         <item>crushed garlic</item>
-        <item>chicken</item>
         <item>celery salt</item>
         <item>chopped parsley</item>
         <item>fresh thyme leaves</item>
@@ -301,7 +304,6 @@
         <item>turkey carcass</item>
         <item>bell pepper</item>
         <item>parsley</item>
-        <item>flour</item>
         <item>light brown sugar</item>
         <item>broccoli florets</item>
         <item>round steaks</item>
@@ -569,7 +571,6 @@
         <item>garlic powder</item>
         <item>butter oil</item>
         <item>chicken tenderloin</item>
-        <item>corn</item>
         <item>shredded pepper jack cheese</item>
         <item>roasted red peppers</item>
         <item>italian sausage</item>
